@@ -20,5 +20,6 @@ before_script:
   - mkdir -p $HOME/src/shippable/codecoverage
 
 script:
+  - echo $HOME
   - go test -coverprofile=coverage.txt -covermode count ./
   - $GOPATH/bin/gocover-cobertura < coverage.txt > $HOME/src/shippable/codecoverage/coverage.xml
