@@ -16,9 +16,9 @@ before_install:
 
 # Make folders for the reports
 before_script:
-  - mkdir -p $HOME/shippable/testresults
-  - mkdir -p $HOME/shippable/codecoverage
+  - mkdir -p $HOME/src/shippable/testresults
+  - mkdir -p $HOME/src/shippable/codecoverage
 
 script:
   - go test -coverprofile=coverage.txt -covermode count ./
-  - $GOPATH/bin/gocover-cobertura < coverage.txt > $HOME/shippable/codecoverage/coverage.xml
+  - $GOPATH/bin/gocover-cobertura < coverage.txt > $HOME/src/shippable/codecoverage/coverage.xml
