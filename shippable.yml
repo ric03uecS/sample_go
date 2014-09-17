@@ -2,7 +2,8 @@ language: go
 
 go:
   - 1.2
-
+addons:
+  firefox: "31.0"
 env:
   - CI_REPORT=shippable/testresults/junit.xml
 
