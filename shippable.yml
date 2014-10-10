@@ -21,5 +21,7 @@ script:
   - go test -coverprofile=coverage.txt -covermode count ./
   - $GOPATH/bin/gocover-cobertura < coverage.txt > shippable/codecoverage/coverage.xml
   
+build_image: shippableimages/ubuntu1204_go:0.0.1
+  
 after_success:
   - echo "executing after success"
