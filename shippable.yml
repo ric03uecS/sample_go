@@ -13,7 +13,8 @@ before_install:
   - go get code.google.com/p/go.tools/cmd/cover
 install:
   - go get -d -v ./... && go build -v ./...
-
+addons:
+  selenium: 2.42
 # Make folders for the reports
 before_script:
   - mkdir -p shippable/testresults
